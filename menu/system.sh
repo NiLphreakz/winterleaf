@@ -31,9 +31,10 @@ echo -e "   \e[$number (•9)\e[m  \e[$below Restart VPN\e[m"
 echo -e "   \e[$number (•10)\e[m \e[$below Xray Changer\e[m"
 echo -e "   \e[$number (•11)\e[m \e[$below Xray Version\e[m"
 echo -e "   \e[$number (•12)\e[m \e[$below Warp Installer\e[m"
-echo -e "   \e[$number (•13)\e[m \e[$below Speedtest VPS\e[m"
-echo -e "   \e[$number (•14)\e[m \e[$below ON/OF Auto Reboot\e[m"
-echo -e "   \e[$number (•15)\e[m \e[$below Change Password\e[m"
+echo -e "   \e[$number (•13)\e[m \e[$below Install NoobzVpn\e[m"
+echo -e "   \e[$number (•14)\e[m \e[$below Speedtest VPS\e[m"
+echo -e "   \e[$number (•15)\e[m \e[$below ON/OF Auto Reboot\e[m"
+echo -e "   \e[$number (•16)\e[m \e[$below Change Password\e[m"
 echo -e ""
 echo -e "   \e[$line════════════════════════════════════════\e[m"
 echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
@@ -79,12 +80,15 @@ xray version
 wget -q -O /usr/sbin/setup2 "https://raw.githubusercontent.com/NiLphreakz/warp-installer/main/setup.sh" && chmod +x /usr/sbin/setup2 && setup2
 ;;
 13)
-speedtest
+git clone https://github.com/NiLphreakz/winterleaf.git && cd winterleaf/ && sh ./install.sh && systemctl start noobzvpns.service
 ;;
 14)
-autoreboot
+speedtest
 ;;
 15)
+autoreboot
+;;
+16)
 passwd
 ;;
 x)
